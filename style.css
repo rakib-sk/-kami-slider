@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: black;
+}
+
+img.floating {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  animation: floatFast linear infinite;
+}
+
+@keyframes floatFast {
+  0% { transform: translate(0,0) rotate(0deg); }
+  25% { transform: translate(200px, -150px) rotate(90deg); }
+  50% { transform: translate(-150px, 200px) rotate(180deg); }
+  75% { transform: translate(150px, -200px) rotate(270deg); }
+  100% { transform: translate(0,0) rotate(360deg); }
+}
